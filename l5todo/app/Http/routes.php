@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::model('tasks', 'Task');
+Route::model('projects', 'Project');
+
 Route::resource('projects', 'ProjectsController');
 Route::resource('projects.tasks', 'TasksController');
 
